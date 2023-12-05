@@ -47,13 +47,32 @@ html {
       right: -50%;
       transition: all 1.5s ease 0s;
   }
-  
-  @media (min-width: 700px) {
+/* Add media query for screens with a minimum width of 700px */
+@media (min-width: 700px) {
     .solar-system {
       padding-top: 700px;
     }
   }
   
+  /* Add media query for smaller screens */
+  @media (max-width: 600px) {
+    body {
+      font-size: 50%; /* Adjust font size for smaller screens */
+    }
+  
+    .solar-system {
+      padding-top: 80%; /* Adjust padding for smaller screens */
+    }
+  
+    /* Adjust positions for smaller screens */
+    .solar-system.top-pos,
+    .solar-system.bot-pos,
+    .solar-system.right-pos,
+    .solar-system.left-pos {
+      bottom: 0;
+      right: 0;
+    }
+  }
   
   /*** ORBITS ***/
   
